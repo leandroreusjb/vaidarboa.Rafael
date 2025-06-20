@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaidarboa.net - A Maior Plataforma de Apostas Online do Brasil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="icon.ico"> <!-- Favicon -->
+    <!-- Google Fonts for Oswald and Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Junte-se à vaidarboa.net, a maior plataforma de apostas online do Brasil. Aproveite as melhores cotações, bônus diários, suporte 24/7 e saques rápidos a partir de R$ 5,00. Cadastre-se agora!">
+    <meta name="keywords" content="Vaidarboa.net, apostas online, cotações, bônus, suporte, saques rápidos, Brasil, app android, app ios">
+    <meta name="author" content="Vaidarboa.net">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <!-- Open Graph Protocol for Social Media -->
+    <meta property="og:title" content="Vaidarboa.net - A Maior Plataforma de Apostas Online do Brasil">
+    <meta property="og:description" content="Experimente a Talismã Bet com as melhores cotações e bônus exclusivos. Baixe nosso app para Android e iOS e comece a apostar com segurança!">
+    <meta property="og:image" content="https://vaidarboa.net/banner.jpg">
+    <meta property="og:url" content="https://vaidarboa.net/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Vaidarboa.net">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="vaidarboa.net - Apostas Online">
+    <meta name="twitter:description" content="A maior plataforma de apostas online do Brasil com cotações incríveis e saques a partir de R$ 5,00.">
+    <meta name="twitter:image" content="https://vaidarboa.net/banner.jpg">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://vaidarboa.net/">
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "vaidarboa.net",
+        "url": "https://vaidarboa.net/",
+        "logo": "logo.png",
+        "sameAs": [
+            "https://wa.me/+5551993622036"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+5551993622036",
+            "contactType": "Customer Service"
+        }
+    }
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Vaidarboa.net - Apostas Online",
+        "description": "Plataforma de apostas online com as melhores cotações e suporte 24/7.",
+        "url": "https://vaidarboa.net/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Vaidarboa.net"
+        }
+    }
+    </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X511VLGFJE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X511VLGFJE');
+</script>
+
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(180deg, #000000, #2a2a2a);
+        }
+
+        header img {
+            max-width: 200px;
+        }
+
+        header p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Seções */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        /* Primeira Seção - Cotações */
+        #cotacoes {
+            background: none;
+        }
+
+        #cotacoes img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .expandable-container {
+            cursor: pointer;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .expandable-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+
+        .arrow-container {
+            margin-top: -5px;
+        }
+
+        .expandable-container.active .arrow-container {
+            display: none;
+        }
+
+        .cotacoes-text {
+            display: none;
+            font-size: 16px;
+            color: #fff;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        .cotacoes-text.active {
+            display: block;
+        }
+
+        .cotacoes-text .cotacao-grid {
+            display: grid;
+            grid-template-columns: 1fr 80px;
+            gap: 5px 10px;
+            align-items: center;
+        }
+
+        .cotacoes-text span {
+            display: flex;
+            align-items: center;
+        }
+
+        .cotacoes-text i {
+            color: #ffd700;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+
+        .cotacoes-text .value {
+            color: #ffd700;
+            text-align: right;
+        }
+
+        /* Seções com gradiente (a partir da segunda) */
+        #cards, #banner, #beneficios, #bonus, #pagamentos, #grupo, #responsabilidade {
+            background: linear-gradient(0deg, #000000, #2a2a2a);
+        }
+
+        /* Segunda Seção - Cards */
+        #cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #cards h2 {
+            width: 100%;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            border: 1px solid #ffd700;
+        }
+
+        .card i {
+            color: #ffd700;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        /* Nova Seção - Bônus */
+        #bonus .bonus-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        #bonus .bonus-card {
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 20px;
+            width: 300px;
+            text-align: center;
+            border: 1px solid #ffd700;
+            transition: transform 0.3s ease;
+        }
+
+        #bonus .bonus-card:hover {
+            transform: scale(1.05);
+        }
+
+        #bonus .bonus-card .highlight {
+            display: inline-block;
+            font-size: 48px;
+            font-weight: bold;
+            color: #ffd700;
+            background-color: #1a1a1a;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            font-family: 'Oswald', sans-serif;
+        }
+
+        #bonus .bonus-card h3 {
+            font-size: 24px;
+            background: linear-gradient(180deg, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #bonus .bonus-card p {
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #bonus .observation {
+            font-size: 16px;
+            color: #fff;
+            margin-top: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        #bonus .observation::before {
+            content: '💡';
+            color: #ffd700;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* Terceira Seção - Banner */
+        #banner img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Quarta Seção - Benefícios */
+        #beneficios ul {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        #beneficios li {
+            font-size: 18px;
+            color: #fff;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        #beneficios li::before {
+            content: '★';
+            color: #ffd700;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* Quinta Seção - Pagamentos */
+        #pagamentos img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        /* Sexta Seção - Grupo */
+        #grupo button {
+            background-color: #ffd700;
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        #grupo button:hover {
+            background-color: #e6c200;
+        }
+
+        #grupo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Sétima Seção - Responsabilidade */
+        #responsabilidade img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        #responsabilidade p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Botão Flutuante */
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            max-width: 500px;
+            background-color: #ffd700;
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-transform: uppercase;
+            z-index: 1000;
+            box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .floating-button:hover {
+            background-color: #e6c200;
+            box-shadow: 0 0 15px #ffd700, 0 0 25px #ffd700, 0 0 40px #ffd700;
+        }
+
+        @media (max-width: 600px) {
+            .floating-button {
+                width: calc(100% - 40px);
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+        }
+
+        /* Ícone WhatsApp */
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-icon img {
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <img src="logo.png" alt="Logo VaiDarBoa.com - Plataforma de Apostas Online">
+        <p>Maior plataforma de apostas online do Brasil</p>
+    </header>
+
+    <!-- Primeira Seção - Cotações -->
+    <section id="cotacoes">
+        <img src="img/8mil.webp" alt="Cotações de 8 Mil na VaiDarBoa.com">
+        <div class="expandable-container" onclick="toggleCotacoes()">
+            <div class="expandable-title">Veja as cotações</div>
+            <div class="arrow-container">
+                <i class="fas fa-chevron-down" style="color: #ffd700; font-size: 24px;"></i>
+            </div>
+        </div>
+        <div class="cotacoes-text">
+            <div class="cotacao-grid">
+                <span>SUPER COTAÇÃO</span>
+                <span></span>
+                <span><i class="fas fa-check-circle"></i>Milhar</span>
+                <span class="value">8.000,00</span>
+                <span><i class="fas fa-check-circle"></i>Centena</span>
+                <span class="value">800,00</span>
+                <span><i class="fas fa-check-circle"></i>Grupo</span>
+                <span class="value">20,00</span>
+                <span><i class="fas fa-check-circle"></i>Dezena</span>
+                <span class="value">80,00</span>
+                <span><i class="fas fa-check-circle"></i>Unidade</span>
+                <span class="value">8,00</span>
+                <span><i class="fas fa-check-circle"></i>Duque de Grupo (1º ao 2º)</span>
+                <span class="value">180,00</span>
+                <span><i class="fas fa-check-circle"></i>Duque de Grupo (1º ao 5º)</span>
+                <span class="value">18,00</span>
+                <span><i class="fas fa-check-circle"></i>Duque de Dezena (1º ao 5º)</span>
+                <span class="value">300,00</span>
+                <span><i class="fas fa-check-circle"></i>Terno de Grupo (1º ao 3º)</span>
+                <span class="value">1.500,00</span>
+                <span><i class="fas fa-check-circle"></i>Terno de Grupo (1º ao 5º)</span>
+                <span class="value">150,00</span>
+                <span><i class="fas fa-check-circle"></i>Passe Vai</span>
+                <span class="value">90,00</span>
+                <span><i class="fas fa-check-circle"></i>Passe Vai e Vem</span>
+                <span class="value">45,00</span>
+                <span><i class="fas fa-check-circle"></i>Terno de Dezena (1º ao 5º)</span>
+                <span class="value">5.000,00</span>
+                <span><i class="fas fa-check-circle"></i>Quadra de Grupo (1º ao 5º)</span>
+                <span class="value">1.000,00</span>
+                <span><i class="fas fa-check-circle"></i>Quina de Grupo (1º ao 5º)</span>
+                <span class="value">1.000,00</span>
+                <span><i class="fas fa-check-circle"></i>Sena de Grupo (1º ao 6º)</span>
+                <span class="value">1.000,00</span>
+                <span><i class="fas fa-check-circle"></i>Palpitão</span>
+                <span class="value">800,00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Segunda Seção - Cards -->
+    <section id="cards">
+        <h2>AQUI DESCOMPLICAMOS TUDO PRA VOCÊ!</h2>
+        <div class="cards-container">
+            <div class="card">
+                <i class="fas fa-headset"></i>
+                <h3>Suporte e SAC</h3>
+                <p>Suporte humanizado, estamos sempre disponíveis para tirar qualquer dúvida e só chamar!</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-money-bill-wave"></i>
+                <h3>Lucros</h3>
+                <p>Credibilidade com os pagamentos, clicou recebeu!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terceira Seção - Banner -->
+    <section id="banner">
+        <img src="img/saque.jpg" alt="Banner Promocional VaiDarBoa.com">
+    </section>
+
+    <!-- Quarta Seção - Benefícios -->
+    <section id="beneficios">
+        <h2>CONFIRA TODOS OS BENEFÍCIOS DA NOSSA PLATAFORMA</h2>
+        <ul>
+            <li>MELHORES COTAÇÕES DE MODALIDADES</li>
+            <li>APP PARA ANDROID e IPHONE IOS</li>
+            <li>DEPÓSITO A PARTIR DE R$ 5,00</li>
+            <li>SAQUES E RECARGAS PELO APP</li>
+            <li>100% AUTOMATIZADO E RÁPIDO</li>
+            <li>SEUS DADOS SEGUROS</li>
+        </ul>
+    </section>
+
+    <!-- Nova Seção - Super Bônus -->
+    <section id="bonus">
+        <h2>SUPER BÔNUS</h2>
+        <div class="bonus-container">
+            <div class="bonus-card">
+                <div class="highlight">30%</div>
+                <h3>Bônus de Boas-Vindas</h3>
+                <p>Limitado até R$ 200,00</p>
+            </div>
+            <div class="bonus-card">
+                <div class="highlight">20%</div>
+                <h3>Bônus Dias de Federal</h3>
+                <p>Válido na primeira recarga do dia</p>
+                <p>Sem limite de depósito</p>
+            </div>
+            <div class="bonus-card">
+                <div class="highlight">15%</div>
+                <h3>Bônus Dias Normais</h3>
+                <p>Válido na primeira recarga do dia</p>
+                <p>Sem limite de depósito</p>
+            </div>
+        </div>
+        <div class="observation">Observação: Os bônus são válidos apenas na modalidade LOTERIAS.</div>
+    </section>
+
+    <!-- Quinta Seção - Pagamentos -->
+    <section id="pagamentos">
+        <img src="img/pix.webp" alt="Pagamento via Pix VaiDarBoa.com">
+        <img src="img/seguro.webp" alt="Pagamento Seguro VaiDarBoa.com">
+    </section>
+
+    <!-- Sétima Seção - Responsabilidade -->
+    <section id="responsabilidade">
+        <img src="img/sem-menores.webp" alt="Proibido para Menores de Idade VaiDarBoa.com">
+        <p>PROIBIDO PARA MENORES</p>
+        <img src="img/18.webp" alt="Apostas a partir de 18 anos VaiDarBoa.com">
+        <p>JOGUE COM RESPONSABILIDADE</p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2025 Talismã Bet. Todos os direitos reservados.</p>
+        <p><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
+    </footer>
+
+    <!-- Botão Flutuante -->
+    <button class="floating-button" onclick="window.location.href='https://app.vaidarboa.com/pr/uVL7vZJI'">QUERO ME CADASTRAR!</button>
+
+    <!-- Ícone WhatsApp -->
+    <a href="https://wa.me/+5551993622036" class="whatsapp-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Contato via WhatsApp VaiDarBoa.com">
+    </a>
+
+    <script>
+        function toggleCotacoes() {
+            const text = document.querySelector('.cotacoes-text');
+            const container = document.querySelector('.expandable-container');
+            text.classList.toggle('active');
+            container.classList.toggle('active');
+        }
+
+        // Fade-in effect on scroll
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+
+        // Trigger initial check
+        window.addEventListener('load', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
